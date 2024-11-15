@@ -4,23 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01b4b55b-1303-4fb7-8ea2-04d628a38c8d" name="Список изменений" comment="логи почистил я">
-      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/feature_request.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/mariadb103/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/mariadb104/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/mariadb105/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/mariadb106/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/mysql57/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/php54/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/php56/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/php71/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/php72/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/php73/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/php74/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/php8/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/php81/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/php82/Dockerfile" beforeDir="false" />
+    <list default="true" id="01b4b55b-1303-4fb7-8ea2-04d628a38c8d" name="Список изменений" comment="инит">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/www/db.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +19,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "websitewave"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/websitewave/picrab.git",
+    "accountId": "f0541c6b-2d45-4407-a210-a86aa1f15145"
+  }
+}]]></component>
+  <component name="MigrationScriptOptions">
+    <option name="ignoreImplicitObjects" value="true" />
+    <option name="ignoreSourceCode" value="false" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2ot4v4IMzfpTWMRz4UP00HMbL9x" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -46,15 +48,20 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "//wsl$/Ubuntu/home/alex/projects/lamp/www",
+    "last_opened_file_path": "//wsl$/Ubuntu/home/alex/projects/picrab",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+    "settings.editor.selected.configurable": "settings.sync"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -94,6 +101,11 @@
     <MESSAGE value="проект залил" />
     <MESSAGE value="проект залил и сделал" />
     <MESSAGE value="логи почистил я" />
-    <option name="LAST_COMMIT_MESSAGE" value="логи почистил я" />
+    <MESSAGE value="инит" />
+    <option name="LAST_COMMIT_MESSAGE" value="инит" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

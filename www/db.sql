@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Хост: mysql
--- Время создания: Ноя 08 2024 г., 07:05
--- Версия сервера: 5.5.64-MariaDB-1~trusty
--- Версия PHP: 8.2.8
+-- Хост: database:3306
+-- Время создания: Ноя 15 2024 г., 14:33
+-- Версия сервера: 8.4.3
+-- Версия PHP: 8.2.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `databse`
+-- База данных: `docker`
 --
 
 -- --------------------------------------------------------
@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `menus` (
-                         `id` int(11) NOT NULL,
+                         `id` int NOT NULL,
                          `name` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Дамп данных таблицы `menus`
@@ -47,13 +47,13 @@ INSERT INTO `menus` (`id`, `name`) VALUES
 --
 
 CREATE TABLE `menu_items` (
-                              `id` int(11) NOT NULL,
-                              `menu_id` int(11) NOT NULL,
+                              `id` int NOT NULL,
+                              `menu_id` int NOT NULL,
                               `title` varchar(255) NOT NULL,
                               `url` varchar(255) NOT NULL,
-                              `parent_id` int(11) DEFAULT NULL,
-                              `position` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+                              `parent_id` int DEFAULT NULL,
+                              `position` int NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Дамп данных таблицы `menu_items`
@@ -77,12 +77,12 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `parent_id`, `positio
 --
 
 CREATE TABLE `modules` (
-                           `id` int(11) NOT NULL,
+                           `id` int NOT NULL,
                            `name` varchar(100) NOT NULL,
                            `version` varchar(20) NOT NULL,
                            `enabled` tinyint(1) NOT NULL DEFAULT '0',
                            `installed_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Дамп данных таблицы `modules`
@@ -98,7 +98,7 @@ INSERT INTO `modules` (`id`, `name`, `version`, `enabled`, `installed_at`) VALUE
 --
 
 CREATE TABLE `pages` (
-                         `id` int(11) NOT NULL,
+                         `id` int NOT NULL,
                          `slug` varchar(255) NOT NULL,
                          `title` varchar(255) NOT NULL,
                          `content` mediumtext NOT NULL,
@@ -108,7 +108,7 @@ CREATE TABLE `pages` (
                          `meta_title` varchar(255) DEFAULT NULL,
                          `meta_description` mediumtext,
                          `type` enum('normal','home','404') NOT NULL DEFAULT 'normal'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Дамп данных таблицы `pages`
@@ -126,11 +126,11 @@ INSERT INTO `pages` (`id`, `slug`, `title`, `content`, `created_at`, `updated_at
 --
 
 CREATE TABLE `parser_logs` (
-                               `id` int(11) NOT NULL,
-                               `task_id` int(11) NOT NULL,
+                               `id` int NOT NULL,
+                               `task_id` int NOT NULL,
                                `message` text NOT NULL,
                                `created_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -139,10 +139,10 @@ CREATE TABLE `parser_logs` (
 --
 
 CREATE TABLE `parser_page_types` (
-                                     `id` int(11) NOT NULL,
-                                     `profile_id` int(11) NOT NULL,
+                                     `id` int NOT NULL,
+                                     `profile_id` int NOT NULL,
                                      `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -151,15 +151,15 @@ CREATE TABLE `parser_page_types` (
 --
 
 CREATE TABLE `parser_parameters` (
-                                     `id` int(11) NOT NULL,
-                                     `page_type_id` int(11) NOT NULL,
+                                     `id` int NOT NULL,
+                                     `page_type_id` int NOT NULL,
                                      `name` varchar(255) NOT NULL,
                                      `type` enum('text','number','image','file') NOT NULL,
                                      `source` enum('donor','generate') NOT NULL,
                                      `selector` varchar(255) DEFAULT NULL,
                                      `default_value` text,
                                      `generate_params` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -168,14 +168,14 @@ CREATE TABLE `parser_parameters` (
 --
 
 CREATE TABLE `parser_profiles` (
-                                   `id` int(11) NOT NULL,
-                                   `user_id` int(11) NOT NULL,
+                                   `id` int NOT NULL,
+                                   `user_id` int NOT NULL,
                                    `name` varchar(255) NOT NULL,
                                    `api_model` varchar(255) DEFAULT NULL,
                                    `api_key` varchar(255) DEFAULT NULL,
                                    `recipient_cms` varchar(255) DEFAULT NULL,
                                    `shared_with` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -184,13 +184,13 @@ CREATE TABLE `parser_profiles` (
 --
 
 CREATE TABLE `parser_tasks` (
-                                `id` int(11) NOT NULL,
-                                `profile_id` int(11) NOT NULL,
-                                `user_id` int(11) NOT NULL,
+                                `id` int NOT NULL,
+                                `profile_id` int NOT NULL,
+                                `user_id` int NOT NULL,
                                 `status` enum('pending','running','completed','failed') NOT NULL DEFAULT 'pending',
                                 `created_at` datetime NOT NULL,
                                 `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -199,10 +199,10 @@ CREATE TABLE `parser_tasks` (
 --
 
 CREATE TABLE `roles` (
-                         `id` int(11) NOT NULL,
+                         `id` int NOT NULL,
                          `name` varchar(100) NOT NULL,
                          `description` mediumtext
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Дамп данных таблицы `roles`
@@ -221,7 +221,7 @@ INSERT INTO `roles` (`id`, `name`, `description`) VALUES
 CREATE TABLE `settings` (
                             `key` varchar(100) NOT NULL,
                             `value` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Дамп данных таблицы `settings`
@@ -237,10 +237,10 @@ INSERT INTO `settings` (`key`, `value`) VALUES
 --
 
 CREATE TABLE `themes` (
-                          `id` int(11) NOT NULL,
+                          `id` int NOT NULL,
                           `name` varchar(100) NOT NULL,
                           `enabled` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Дамп данных таблицы `themes`
@@ -256,14 +256,14 @@ INSERT INTO `themes` (`id`, `name`, `enabled`) VALUES
 --
 
 CREATE TABLE `users` (
-                         `id` int(11) NOT NULL,
+                         `id` int NOT NULL,
                          `username` varchar(255) NOT NULL,
                          `email` varchar(255) NOT NULL,
                          `password_hash` varchar(255) NOT NULL,
                          `created_at` datetime NOT NULL,
                          `updated_at` datetime DEFAULT NULL,
                          `status` enum('active','inactive','banned') NOT NULL DEFAULT 'active'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Дамп данных таблицы `users`
@@ -279,9 +279,9 @@ INSERT INTO `users` (`id`, `username`, `email`, `password_hash`, `created_at`, `
 --
 
 CREATE TABLE `user_roles` (
-                              `user_id` int(11) NOT NULL,
-                              `role_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+                              `user_id` int NOT NULL,
+                              `role_id` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Дамп данных таблицы `user_roles`
@@ -402,73 +402,73 @@ ALTER TABLE `user_roles`
 -- AUTO_INCREMENT для таблицы `menus`
 --
 ALTER TABLE `menus`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+    MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблицы `menu_items`
 --
 ALTER TABLE `menu_items`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+    MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT для таблицы `modules`
 --
 ALTER TABLE `modules`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+    MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `pages`
 --
 ALTER TABLE `pages`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+    MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT для таблицы `parser_logs`
 --
 ALTER TABLE `parser_logs`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+    MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `parser_page_types`
 --
 ALTER TABLE `parser_page_types`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+    MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `parser_parameters`
 --
 ALTER TABLE `parser_parameters`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+    MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `parser_profiles`
 --
 ALTER TABLE `parser_profiles`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+    MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `parser_tasks`
 --
 ALTER TABLE `parser_tasks`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+    MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `roles`
 --
 ALTER TABLE `roles`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+    MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `themes`
 --
 ALTER TABLE `themes`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+    MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+    MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
@@ -519,6 +519,8 @@ ALTER TABLE `user_roles`
     ADD CONSTRAINT `user_roles_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
     ADD CONSTRAINT `user_roles_ibfk_2` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE;
 COMMIT;
+
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
