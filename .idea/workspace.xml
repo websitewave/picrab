@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01b4b55b-1303-4fb7-8ea2-04d628a38c8d" name="Список изменений" comment="конфиг и бд">
-      <change afterPath="$PROJECT_DIR$/www/modules/crab/config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/modules/crab/controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/modules/crab/model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/modules/crab/routes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/modules/crab/templates/create_page_type.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/modules/crab/templates/create_parameter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/modules/crab/templates/create_profile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/modules/crab/templates/edit_page_type.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/modules/crab/templates/edit_parameter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/modules/crab/templates/edit_profile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/modules/crab/templates/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/modules/crab/templates/parameters.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/modules/crab/templates/view_profile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/modules/crab/templates/view_task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f9388862-99d8-4366-84dc-6a4f7f03c9e7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f9388862-99d8-4366-84dc-6a4f7f03c9e7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="01b4b55b-1303-4fb7-8ea2-04d628a38c8d" name="Список изменений" comment="конфиг и бд" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
