@@ -4,9 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01b4b55b-1303-4fb7-8ea2-04d628a38c8d" name="Список изменений" comment="инит">
+    <list default="true" id="01b4b55b-1303-4fb7-8ea2-04d628a38c8d" name="Список изменений" comment="конфиг и бд">
+      <change afterPath="$PROJECT_DIR$/www/modules/crab/config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/modules/crab/controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/modules/crab/model.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/modules/crab/routes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/modules/crab/templates/create_page_type.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/modules/crab/templates/create_parameter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/modules/crab/templates/create_profile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/modules/crab/templates/edit_page_type.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/modules/crab/templates/edit_parameter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/modules/crab/templates/edit_profile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/modules/crab/templates/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/modules/crab/templates/parameters.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/modules/crab/templates/view_profile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/modules/crab/templates/view_task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f9388862-99d8-4366-84dc-6a4f7f03c9e7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f9388862-99d8-4366-84dc-6a4f7f03c9e7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/www/db.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,11 +50,17 @@
     <option name="ignoreImplicitObjects" value="true" />
     <option name="ignoreSourceCode" value="false" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="picrab-webserver:latest" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2ot4v4IMzfpTWMRz4UP00HMbL9x" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -48,15 +69,18 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm": "Docker",
+    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm": "Docker",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "//wsl$/Ubuntu/home/alex/projects/picrab",
+    "last_opened_file_path": "//wsl$/Ubuntu/home/alex/projects/picrab/www/modules",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.sync"
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -66,6 +90,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\alex\projects\picrab\www\modules" />
+      <recent name="\\wsl$\Ubuntu\home\alex\projects\picrab\www\modules\ai-models" />
       <recent name="\\wsl$\Ubuntu\home\alex\projects\lamp\www" />
     </key>
   </component>
@@ -102,7 +128,8 @@
     <MESSAGE value="проект залил и сделал" />
     <MESSAGE value="логи почистил я" />
     <MESSAGE value="инит" />
-    <option name="LAST_COMMIT_MESSAGE" value="инит" />
+    <MESSAGE value="конфиг и бд" />
+    <option name="LAST_COMMIT_MESSAGE" value="конфиг и бд" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
